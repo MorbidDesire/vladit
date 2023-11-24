@@ -2,7 +2,6 @@
 
 **A small autocomplete field to find the city**
 
-***
 ## Setup:
 
 1. Clone repository
@@ -10,6 +9,7 @@
 3. Install dependencies
 ```bash
 npm ci
+make install
 ```
 4. Build the app by one of the following commands
 ```bash
