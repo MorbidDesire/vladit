@@ -9,7 +9,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
-    open: true,
     host: 'localhost',
     port: 8080,
   },

@@ -1,1 +1,100 @@
-$bg-color: pink;body { background: $bg-color;}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+$font-titilum: 'Titillium Web', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+$primary-color: linear-gradient(#47b6e2, #E8D9A9) fixed;
+$header-color:  rgba(53, 50, 50, 0.12);
+$text-color: rgb(25, 27, 29);
+$button-color: linear-gradient(to right, #9EEFE1 0%, #9894b1 51%, #9EEFE1 100%);
+$d-flex: flex;
+$fl-column: column;
+
+%text-design {
+    text-shadow: #6ebee2 1px 1px 2px;
+    text-indent: 25px;
+    word-spacing: 7px;
+    cursor: default;
+}
+
+%form-design {
+    margin: 0 20px;
+    font-family: $font-montserrat;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.page { 
+    box-sizing: border-box;
+    background: $primary-color;
+    display: $d-flex;
+    flex-direction: $fl-column;
+    height: 100vh;
+    margin: 0;
+    justify-content: space-between;
+
+    .header, .footer {
+        display: $d-flex;
+        background-color: $header-color;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__text {
+        @extend %text-design;
+        color: $text-color;
+        font-family: $font-titilum;
+        font-weight: 400;
+        font-size: 40px;
+    }
+
+    .footer__text {
+        @extend %text-design;
+        color: $text-color;
+        letter-spacing: -0.28px;
+    }
+}
+
+.cities {
+    display: $d-flex;
+    flex-direction: $fl-column;
+    justify-content: space-around;
+    height: 200px;
+    &__text {
+        @extend %text-design;
+        color: $text-color;
+        font-family: $font-titilum;
+        font-size: 25px;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__form {
+        display: $d-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__button {
+        @extend %form-design;
+        text-decoration: none;
+        outline: none;
+        color: rgb(22, 20, 20);
+        padding: 20px 30px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-image: $button-color;
+        background-size: 200% auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    }
+    &__input {
+        @extend %form-design;
+        height: 55px;
+        width: 250px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        box-shadow: inset 0 1px 3px #ddd;
+        border-radius: 4px;
+        padding: 8px 10px;
+    }
+}

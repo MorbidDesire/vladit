@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^1.6.2",
     "css-loader": "^6.8.1",
     "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -29,6 +30,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "on-change": "^4.0.2",
     "webpack-dev-server": "^4.15.1"
   }
 }

@@ -5,13 +5,33 @@
         <title>Webpack App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body class="d-flex flex-column min-vh-100">
-        <header>
+    <body class="page">
+        <header class="header">
+            <div class="container">
+                <span class="header__text">FIND THE CITY</span>
+            </div>
         </header>
-        <main class="flex-grow-1">
-            <input type="text" name="" id="">
+        <main>
+            <div class="cities">
+                <div class="container cities__title">
+                    <span class="cities__text">Start typing the city and choose the correct one</span>
+                </div>
+                <form class="cities__form">
+                    <div class="cities__field">
+                        <label class="cities__label" for="cities"></label>
+                        <input class="cities__input" list="city" type="text" name="cities" id="cities" autocomplete="off">
+                        <datalist class="cities__list" id="city">
+                        </datalist>
+                    <button class="cities__button" disabled>Send</button>
+                </form>
+            </div>
         </main>
-        <footer class="footer border-top py-3 mt-5 bg-light">
-        </footer>
+        <footer class="footer">
+            <div class="container">
+              <div class="footer__flex">
+                <span class="footer__text">© 2023, specially for VLAD IT</div>
+              </div>
+            </div>
+          </footer>
     </body>
 </html>

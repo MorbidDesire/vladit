@@ -1,3 +1,3 @@
-import './scss/base.scss';
-import './js/unicorns';
-import './js/rainbow';
+import app from './js/app';
+
+app();
