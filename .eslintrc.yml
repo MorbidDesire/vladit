@@ -1,14 +1,12 @@
 ---
 root: true
 
-plugins:
-  - babel
-
 env:
   node: true
   browser: true
 
-parser: "@babel/eslint-parser"
+parserOptions:
+  ecmaVersion: latest
 
 extends:
   - "airbnb-base"
@@ -16,3 +14,4 @@ extends:
 rules:
   no-console: 0
   import/extensions: 0
+  no-param-reassign: 0
