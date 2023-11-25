@@ -1,0 +1,19 @@
+name: Project lint
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "**"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install 🔧
+        run: make install
+
+      - name: Run Lint 👷
+        run: npx eslint .
+        
