@@ -9,3 +9,6 @@ build-dev:
 
 start:
 	npm start
+
+lint:
+	npx eslint .
