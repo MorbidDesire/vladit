@@ -2,7 +2,8 @@ const renderList = (datalist, cities) => {
   datalist.textContent = '';
   cities.forEach(({ name, region }) => {
     const element = document.createElement('option');
-    element.setAttribute('value', name + region);
+    const finalName = region ? `${name} ${region}` : name;
+    element.setAttribute('value', finalName);
     datalist.append(element);
   });
 };

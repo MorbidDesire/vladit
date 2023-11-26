@@ -17,13 +17,18 @@ const getData = async (queryString, state) => {
     });
     const parsedResponse = JSON.parse(response.data.contents);
     const { result } = parsedResponse;
+    const cities = result.filter((city) => city.type !== '');
     const listOfCities = [];
-    result.forEach(({ name, typeShort, parents }) => {
-      if (typeShort) {
+    cities.forEach(({ name, typeShort, parents }) => {
+      if (parents.length !== 0) {
         const region = parents.find((parent) => parent.contentType === 'region');
         listOfCities.push({
           name: `${typeShort}.${name}`,
-          region: ` ${region.typeShort}.${region.name}`,
+          region: `${region.typeShort}.${region.name}`,
+        });
+      } else {
+        listOfCities.push({
+          name: `${typeShort}.${name}`,
         });
       }
     });
